@@ -1,8 +1,8 @@
 package com.example.demo.endpoint.rest.controller;
 
-import com.example.demo.domain.entity.ImageMetadata;
-import com.example.demo.domain.repository.ImageMetadataRepository;
 import com.example.demo.endpoint.rest.dto.ImageMetadataResponse;
+import com.example.demo.entity.ImageMetadata;
+import com.example.demo.repository.ImageMetadataRepository;
 import com.example.demo.service.ImageUploadService;
 import java.util.List;
 import java.util.UUID;
@@ -29,7 +29,6 @@ public class ImageController {
   public ResponseEntity<Void> uploadImage(
       @RequestParam("file") MultipartFile file, @RequestParam("email") String email) {
     imageUploadService.handleUpload(file, email);
-    // 202 Accepted : le traitement (transformation + email) se fait en arrière-plan.
     return ResponseEntity.accepted().build();
   }
 

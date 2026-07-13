@@ -10,10 +10,6 @@ public final class ImageBlackAndWhiteConverter {
 
   private ImageBlackAndWhiteConverter() {}
 
-  /**
-   * Convertit le fichier image donné (jpg/png) en niveaux de gris et retourne un nouveau fichier
-   * temporaire contenant le résultat, dans le même format.
-   */
   public static File toGrayscale(File input, String extension) throws IOException {
     BufferedImage original = ImageIO.read(input);
     if (original == null) {

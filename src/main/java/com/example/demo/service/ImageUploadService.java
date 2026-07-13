@@ -30,7 +30,7 @@ public class ImageUploadService {
     String extension = extractExtension(originalFileName);
     if (!ALLOWED_EXTENSIONS.contains(extension.toLowerCase())) {
       throw new IllegalArgumentException(
-          "Format non supporté : ." + extension + " (seuls .jpg et .png sont acceptés)");
+          "Format non supporte : ." + extension + " (seuls .jpg et .png sont acceptes)");
     }
 
     String bucketKey = UUID.randomUUID() + "-original." + extension;
@@ -51,7 +51,7 @@ public class ImageUploadService {
   private String extractExtension(String fileName) {
     if (fileName == null || !fileName.contains(".")) {
       throw new IllegalArgumentException(
-          "Le fichier envoyé doit avoir une extension (.jpg ou .png)");
+          "Le fichier envoye doit avoir une extension (.jpg ou .png)");
     }
     return fileName.substring(fileName.lastIndexOf('.') + 1);
   }

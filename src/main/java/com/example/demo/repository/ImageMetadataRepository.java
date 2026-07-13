@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import com.example.demo.domain.entity.ImageMetadata;
+import com.example.demo.entity.ImageMetadata;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 

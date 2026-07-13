@@ -1,8 +1,8 @@
 package com.example.demo.endpoint.rest.controller;
 
-import com.example.demo.domain.entity.User;
 import com.example.demo.endpoint.rest.dto.CreateUserRequest;
 import com.example.demo.endpoint.rest.dto.UserResponse;
+import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
