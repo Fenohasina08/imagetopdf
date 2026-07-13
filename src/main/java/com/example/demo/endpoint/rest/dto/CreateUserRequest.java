@@ -13,7 +13,5 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CreateUserRequest {
 
-    @NotBlank
-    @Email
-    private String email;
+  @NotBlank @Email private String email;
 }

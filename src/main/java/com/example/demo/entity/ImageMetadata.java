@@ -22,22 +22,20 @@ import lombok.Setter;
 @Builder
 public class ImageMetadata {
 
-    @Id
-    @GeneratedValue
-    private UUID id;
+  @Id @GeneratedValue private UUID id;
 
-    @Column(name = "file_name", nullable = false)
-    private String fileName;
+  @Column(name = "file_name", nullable = false)
+  private String fileName;
 
-    @Column(nullable = false)
-    private String email;
+  @Column(nullable = false)
+  private String email;
 
-    @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
+  @Column(name = "created_at", nullable = false)
+  private LocalDateTime createdAt;
 
-     @Column(name = "original_bucket_key", nullable = false)
-    private String originalBucketKey;
+  @Column(name = "original_bucket_key", nullable = false)
+  private String originalBucketKey;
 
-     @Column(name = "transformed_bucket_key", nullable = false)
-    private String transformedBucketKey;
+  @Column(name = "transformed_bucket_key", nullable = false)
+  private String transformedBucketKey;
 }
