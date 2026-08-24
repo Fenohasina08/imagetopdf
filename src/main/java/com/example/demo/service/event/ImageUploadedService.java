@@ -28,9 +28,7 @@ public class ImageUploadedService implements Consumer<ImageUploaded> {
   @Override
   public void accept(ImageUploaded event) {
     String extension = extractExtension(event.getFileName());
-
-    File originalFile = File.createTempFile("original-", "." + extension);
-    bucketComponent.download(event.getOriginalBucketKey(), originalFile);
+    File originalFile = bucketComponent.download(event.getOriginalBucketKey());
 
     File transformedFile = ImageBlackAndWhiteConverter.toGrayscale(originalFile, extension);
 
